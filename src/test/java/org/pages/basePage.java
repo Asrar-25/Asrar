@@ -25,5 +25,11 @@ public class basePage {
 
     }
 
+    public void javaScriptExe(WebElement w){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", w);
+
+
+    }
 
 }
