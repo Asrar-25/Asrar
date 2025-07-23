@@ -9,16 +9,16 @@ public class loginPageObjects extends basePage {
         super();
     }
 
-    @FindBy(xpath = "//*[text()='Flights']//parent::a")
+    @FindBy(xpath = "//span[text()='Flights']")
     public WebElement linkFlights;
 
     @FindBy(xpath = "//*[text()='One-way']//parent::a")
     public WebElement linkOneway;
 
-    @FindBy(xpath = "//input[@aria-label='Leaving from']")
+    @FindBy(xpath = "//button[@aria-label='Leaving from']")
     public WebElement buttonFrom;
 
-    @FindBy(xpath = "//input[@aria-label='Going to']")
+    @FindBy(xpath = "//button[@aria-label='Going to']")
     public WebElement buttonTo;
 
     @FindBy(xpath = "//input[@id='origin_select']")

@@ -31,53 +31,53 @@ public class loginPage extends loginPageObjects {
 
 
     public void clickFlightsLink(){
-        linkFlights.click();
-        driver.findElement(By.xpath("/*[text()='Flights']//parent::a"));
-       // javaScriptExe(linkFlights);
+//        linkFlights.click();
+//        driver.findElement(By.xpath("/*[text()='Flights']//parent::a"));
+        javaScriptExe(linkFlights);
 
     }
 
     public void oneWay() {
-        linkOneway.click();
-        //javaScriptExe(linkOneway);
+//        linkOneway.click();
+        javaScriptExe(linkOneway);
     }
 
     public void leavingFrom(String city) {
-        buttonFrom.click();
+//        buttonFrom.click();
+//        inputFrom.sendKeys(city);
+//        buttonCity.click();
+        javaScriptExe(buttonFrom);
         inputFrom.sendKeys(city);
-        buttonCity.click();
-        //javaScriptExe(buttonFrom);
-        //inputFrom.sendKeys(city);
-        //javaScriptExe(buttonCity);
+        javaScriptExe(buttonCity);
 
     }
 
     public void goingTo(String city) {
-        buttonTo.click();
-        inputTo.sendKeys(city);
-        buttonCityy.click();
-        //javaScriptExe(buttonTo);
+        //buttonTo.click();
         //inputTo.sendKeys(city);
-        //javaScriptExe(buttonCityy);
+        //buttonCityy.click();
+        javaScriptExe(buttonTo);
+        inputTo.sendKeys(city);
+        javaScriptExe(buttonCityy);
 
 
     }
 
     public void travelers() {
 
-        buttonPassenger.click();
-        buttonAdult.click();
-        buttonDone.click();
-        //javaScriptExe(buttonPassenger);
-        //javaScriptExe(buttonAdult);
-        //javaScriptExe(buttonDone);
+//        buttonPassenger.click();
+//        buttonAdult.click();
+//        buttonDone.click();
+        javaScriptExe(buttonPassenger);
+        javaScriptExe(buttonAdult);
+        javaScriptExe(buttonDone);
 
 
     }
 
     public void search() {
-        buttonSearch.click();
-        //javaScriptExe(buttonSearch);
+//        buttonSearch.click();
+        javaScriptExe(buttonSearch);
     }
 
 

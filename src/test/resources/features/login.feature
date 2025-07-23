@@ -1,5 +1,5 @@
 Feature: Flight Booking
-
+@homepage
 
   Scenario: User books a one-way flight
     Given Launch expedia home page
