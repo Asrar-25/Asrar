@@ -9,7 +9,43 @@ public class loginPageObjects extends basePage {
         super();
     }
 
-    @FindBy(xpath = "")
-    public WebElement username;
+    @FindBy(xpath = "//*[text()='Flights']//parent::a")
+    public WebElement linkFlights;
+
+    @FindBy(xpath = "//*[text()='One-way']//parent::a")
+    public WebElement linkOneway;
+
+    @FindBy(xpath = "//input[@aria-label='Leaving from']")
+    public WebElement buttonFrom;
+
+    @FindBy(xpath = "//input[@aria-label='Going to']")
+    public WebElement buttonTo;
+
+    @FindBy(xpath = "//input[@id='origin_select']")
+    public WebElement inputFrom;
+
+    @FindBy(xpath = "//input[@id='destination_select']")
+    public WebElement inputTo;
+
+    @FindBy(xpath = "//button[contains(@aria-label,'MAA - Chennai Intl')]")
+    public WebElement buttonCity;
+
+    @FindBy(xpath = "//button[contains(@aria-label,'DEL - Indira Gandhi Intl')]")
+    public WebElement buttonCityy;
+
+
+    @FindBy(xpath = "//button[contains(@aria-label,'Travelers')]")
+    public WebElement buttonPassenger;
+
+    @FindBy(xpath = "//*[text()='Adults']//parent::div//child::button[2]")
+    public WebElement buttonAdult;
+
+    @FindBy(xpath = "//*[text()='Done']")
+    public WebElement buttonDone;
+
+    @FindBy(xpath = "//*[text()='Search']")
+    public WebElement buttonSearch;
+
 
 }
+
