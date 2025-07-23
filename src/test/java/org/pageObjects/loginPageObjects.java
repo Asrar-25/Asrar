@@ -12,7 +12,7 @@ public class loginPageObjects extends basePage {
     @FindBy(xpath = "//span[text()='Flights']")
     public WebElement linkFlights;
 
-    @FindBy(xpath = "//*[text()='One-way']//parent::a")
+    @FindBy(xpath = "//span[text()='One-way']")
     public WebElement linkOneway;
 
     @FindBy(xpath = "//button[@aria-label='Leaving from']")
