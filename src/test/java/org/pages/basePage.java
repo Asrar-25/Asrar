@@ -2,7 +2,9 @@ package org.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -28,6 +30,15 @@ public class basePage {
     public void javaScriptExe(WebElement w){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", w);
+
+
+    }
+
+
+    public void actions(String s, WebElement e){
+        Actions a = new Actions(driver);
+        e.click();
+        a.keyDown(Keys.CONTROL).sendKeys(s).keyUp(Keys.CONTROL).perform();
 
 
     }

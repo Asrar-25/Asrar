@@ -48,6 +48,7 @@ public class loginPage extends loginPageObjects {
 //        buttonCity.click();
         javaScriptExe(buttonFrom);
         inputFrom.sendKeys(city);
+        actions("chennai", inputFrom);
         javaScriptExe(buttonCity);
 
     }
@@ -58,6 +59,7 @@ public class loginPage extends loginPageObjects {
         //buttonCityy.click();
         javaScriptExe(buttonTo);
         inputTo.sendKeys(city);
+        actions("delhi", inputTo);
         javaScriptExe(buttonCityy);
 
 
@@ -79,6 +81,5 @@ public class loginPage extends loginPageObjects {
 //        buttonSearch.click();
         javaScriptExe(buttonSearch);
     }
-
 
 }
