@@ -22,8 +22,9 @@ public class basePage {
     }
 
     public void waits(WebElement w){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(300));
-        wait.until(ExpectedConditions.elementToBeClickable(w));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3000));
+        wait.until(ExpectedConditions.elementToBeClickable(w)).isDisplayed();
+//        wait.until(ExpectedConditions.visibilityOf(w));
 
     }
 
@@ -34,6 +35,19 @@ public class basePage {
 
     }
 
+    public void javaScriptExe(WebElement e, String s){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].setAttribute(e,s)");
+        js.executeScript("arguments[0].setAttribute('value', arguments[1]);", e, s);
+
+    }
+
+    public void javaScriptExe(String s, WebElement e){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("arguments[0].setAttribute(e,s)");
+        js.executeScript("arguments[0].setAttribute('value', arguments[1]);", e, s);
+
+    }
 
     public void actions(String s, WebElement e){
         Actions a = new Actions(driver);

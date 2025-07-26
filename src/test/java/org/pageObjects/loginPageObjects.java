@@ -9,42 +9,49 @@ public class loginPageObjects extends basePage {
         super();
     }
 
-    @FindBy(xpath = "//span[text()='Flights']")
+    @FindBy(xpath = "(//li//a[@href='/flights'])[1]")
+
     public WebElement linkFlights;
 
-    @FindBy(xpath = "//span[text()='One-way']")
+    @FindBy(xpath = "//button[text()='One Way' and @role='tab']")
     public WebElement linkOneway;
 
-    @FindBy(xpath = "//button[@aria-label='Leaving from']")
+    @FindBy(xpath = "(//*[text()='From']//parent::p//parent::div//parent::div//parent::div)[1]")
     public WebElement buttonFrom;
 
-    @FindBy(xpath = "//button[@aria-label='Going to']")
+    @FindBy(xpath = "(//*[text()='To']//parent::p//parent::div//parent::div//parent::div)[1]")
     public WebElement buttonTo;
 
-    @FindBy(xpath = "//input[@id='origin_select']")
-    public WebElement inputFrom;
+//    @FindBy(xpath = "//input[@id='origin_select']")
+//    public WebElement inputFrom;
 
-    @FindBy(xpath = "//input[@id='destination_select']")
-    public WebElement inputTo;
+//    @FindBy(xpath = "//input[@id='destination_select']")
+//    public WebElement inputTo;
 
-    @FindBy(xpath = "//button[contains(@aria-label,'MAA - Chennai Intl')]")
+    @FindBy(xpath = "(//*[contains(text(),'MAA')]//parent::div//parent::div)[1]")
     public WebElement buttonCity;
 
-    @FindBy(xpath = "//button[contains(@aria-label,'DEL - Indira Gandhi Intl')]")
+    @FindBy(xpath = "(//*[contains(text(),'DEL')]//parent::div//parent::div)[1]")
     public WebElement buttonCityy;
 
+    @FindBy(xpath = "//*[@aria-label='30 August 2025']//parent::button")
+    public WebElement buttonDate;
 
-    @FindBy(xpath = "//button[contains(@aria-label,'Travelers')]")
+
+    @FindBy(xpath = "(//*[text()='Travellers & Class']//parent::p//parent::div//parent::div//parent::div)[1]")
     public WebElement buttonPassenger;
 
-    @FindBy(xpath = "//*[text()='Adults']//parent::div//child::button[2]")
+    @FindBy(xpath = "//p[text()='Adults']//parent::div//following-sibling::div//button[text()='2']")
     public WebElement buttonAdult;
 
-    @FindBy(xpath = "//*[text()='Done']")
+    @FindBy(xpath = "//button[text()='Done']")
     public WebElement buttonDone;
 
-    @FindBy(xpath = "//*[text()='Search']")
+    @FindBy(xpath = "//button[text()='Search']")
     public WebElement buttonSearch;
+
+    @FindBy(xpath = "//input[@value='cheapest']")
+    public WebElement objectResults;
 
 
 }

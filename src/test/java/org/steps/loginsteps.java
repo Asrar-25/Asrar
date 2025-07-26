@@ -26,28 +26,29 @@ public class loginsteps extends stepObjects {
     }
 
     @And("I enter Leaving from as {string}")
-    public void iEnterLeavingFromAs(String arg0) {
+    public void iEnterLeavingFromAs(String arg0) throws InterruptedException {
         lp.leavingFrom("chennai");
     }
 
     @And("I enter Going to as {string}")
-    public void iEnterGoingToAs(String arg0) {
+    public void iEnterGoingToAs(String arg0) throws InterruptedException {
         lp.goingTo("delhi");
     }
 
     @And("I select two travelers and Economy class")
-    public void iSelectTravelersAndEconomyClass(int arg0) {
+    public void iSelectTravelersAndEconomyClass() throws InterruptedException {
         lp.travelers();
     }
 
     @Then("I click on the Search button")
-    public void iClickOnTheSearchButton() {
+    public void iClickOnTheSearchButton() throws InterruptedException {
         lp.search();
     }
 
     @And("I should see the search results for the above search criteria")
-    public void iShouldSeeTheSearchResultsForTheAboveSearchCriteria() throws IOException {
-        lp.screenShot();
+    public void iShouldSeeTheSearchResultsForTheAboveSearchCriteria() throws IOException
+    {
+        lp.screenShot("1");
 
     }
 
