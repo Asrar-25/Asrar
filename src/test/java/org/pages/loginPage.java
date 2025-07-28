@@ -38,6 +38,7 @@ public class loginPage extends loginPageObjects {
 //        linkFlights.click();
 //        driver.findElement(By.xpath("/*[text()='Flights']//parent::a"));
         javaScriptExe(linkFlights);
+        addStepLog("clicked on flight");
 //        waits(linkFlights);
 
     }
@@ -45,6 +46,7 @@ public class loginPage extends loginPageObjects {
     public void oneWay() {
 //        linkOneway.click();
         javaScriptExe(linkOneway);
+        addStepLog("clicked on oneWay");
 //        waits(linkOneway);
     }
 
@@ -53,8 +55,9 @@ public class loginPage extends loginPageObjects {
 //        inputFrom.sendKeys(city);
 //        buttonCity.click();
         javaScriptExe(buttonFrom);
-        javaScriptExe(buttonFrom,"chennai");
+        javaScriptExe(buttonFrom,city);
         sleep(300);
+        addStepLog("Enter text in textbox as "+city);
 //        buttonFrom.sendKeys(city);
 //        actions("chennai", inputFrom);
         javaScriptExe(buttonCity);
@@ -66,9 +69,10 @@ public class loginPage extends loginPageObjects {
         //buttonTo.click();
         //inputTo.sendKeys(city);
         //buttonCityy.click();
-        javaScriptExe(buttonTo);
+        javaScriptExe(buttonTo, city);
 //        javaScriptExe("delhi", buttonTo);
         sleep(10000);
+        addStepLog("Enter text in textbox as "+city);
 //        buttonTo.sendKeys(city);
 //        actions("delhi", inputTo);
 //        javaScriptExe(buttonCityy);
@@ -85,6 +89,7 @@ public class loginPage extends loginPageObjects {
         sleep(3000);
         javaScriptExe(buttonAdult);
         javaScriptExe(buttonDone);
+        addStepLog("clicked on travelers");
 
 
     }
@@ -96,11 +101,12 @@ public class loginPage extends loginPageObjects {
         List<String> windowHandlesList = new ArrayList<>(allWindowHandles);
         driver.switchTo().window(windowHandlesList.get(1));
         sleep(15000);
+        addStepLog("clicked o search");
     }
 
     public void linkRoundTrip() throws InterruptedException {
         javaScriptExe(buttonDate);
-
+        addStepLog("clicked on roundTrip");
     }
 
 

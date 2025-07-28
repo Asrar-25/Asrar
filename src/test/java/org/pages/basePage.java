@@ -1,5 +1,6 @@
 package org.pages;
 
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,6 +13,7 @@ import org.utils.driverManager;
 
 import java.time.Duration;
 
+import static org.utils.TestNGListener.test;
 import static org.utils.driverManager.driver;
 
 public class basePage {
@@ -54,7 +56,11 @@ public class basePage {
         e.click();
         a.keyDown(Keys.CONTROL).sendKeys(s).keyUp(Keys.CONTROL).perform();
 
+    }
 
+    public void addStepLog(String log) {
+        test.get().log(Status.INFO, log);
+        System.out.println(log);
     }
 
 }
