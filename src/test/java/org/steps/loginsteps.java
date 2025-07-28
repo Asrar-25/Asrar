@@ -52,4 +52,9 @@ public class loginsteps extends stepObjects {
 
     }
 
+    @And("I select the Round trip option")
+    public void iSelectTheRoundTripOption() throws InterruptedException {
+        lp.linkRoundTrip();
+
+    }
 }

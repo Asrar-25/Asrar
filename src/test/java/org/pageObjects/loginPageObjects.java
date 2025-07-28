@@ -53,6 +53,13 @@ public class loginPageObjects extends basePage {
     @FindBy(xpath = "//input[@value='cheapest']")
     public WebElement objectResults;
 
+    @FindBy(xpath = "//button[text()='Round Trip' and @role='tab']")
+    public WebElement linkRoundTrip;
+
+    @FindBy(xpath = "//*[@aria-label='10 September 2025']//parent::button")
+    public WebElement buttonReturn;
+
+
 
 }
 

@@ -4,6 +4,8 @@ import com.google.common.collect.Sets;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.pageObjects.loginPageObjects;
+
+import static java.lang.Thread.sleep;
 import static org.utils.driverManager.driver;
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +18,7 @@ public class loginPage extends loginPageObjects {
 
     public void loginintoapplication() throws InterruptedException, IOException {
         d.getDriver().get("https://www.ixigo.com/");
-        Thread.sleep(3000);
+        sleep(3000);
         TakesScreenshot ts = (TakesScreenshot) d.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);
         File destination = new File(System.getProperty("user.dir")+"/screenshot.png");
@@ -52,11 +54,11 @@ public class loginPage extends loginPageObjects {
 //        buttonCity.click();
         javaScriptExe(buttonFrom);
         javaScriptExe(buttonFrom,"chennai");
-        Thread.sleep(300);
+        sleep(300);
 //        buttonFrom.sendKeys(city);
 //        actions("chennai", inputFrom);
         javaScriptExe(buttonCity);
-        Thread.sleep(300);
+        sleep(300);
 
     }
 
@@ -66,7 +68,7 @@ public class loginPage extends loginPageObjects {
         //buttonCityy.click();
         javaScriptExe(buttonTo);
 //        javaScriptExe("delhi", buttonTo);
-        Thread.sleep(10000);
+        sleep(10000);
 //        buttonTo.sendKeys(city);
 //        actions("delhi", inputTo);
 //        javaScriptExe(buttonCityy);
@@ -80,7 +82,7 @@ public class loginPage extends loginPageObjects {
 //        buttonAdult.click();
 //        buttonDone.click();
         javaScriptExe(buttonPassenger);
-        Thread.sleep(3000);
+        sleep(3000);
         javaScriptExe(buttonAdult);
         javaScriptExe(buttonDone);
 
@@ -93,10 +95,13 @@ public class loginPage extends loginPageObjects {
         Set<String> allWindowHandles = driver.getWindowHandles();
         List<String> windowHandlesList = new ArrayList<>(allWindowHandles);
         driver.switchTo().window(windowHandlesList.get(1));
-        Thread.sleep(15000);
+        sleep(15000);
     }
 
+    public void linkRoundTrip() throws InterruptedException {
+        javaScriptExe(buttonDate);
 
+    }
 
 
 }
